@@ -9,9 +9,14 @@
       <a href="/">Home</a>
       <a href="/about/">About</a>
     </nav>
+    <p>Name: {{ site.name }}</p>
+    <p>Post: {{ posts.post }}</p>
   </header>
 
   <main>
+    {% if description %}
+      <p>{{ description }}</p>
+    {% endif %}
     {{ content | safe }}
   </main>
 
